@@ -1,0 +1,27 @@
+{% comment %} できてない {% endcomment %}
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- 標準スタイルの「rythm-bass」を設定 -->
+    <div class="rythm-bass">
+      <!-- スピーカーの画像を設置 -->
+      <img src="d-minor-scale-and-primary-chords-compressor.png" />
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rythm.js/2.2.5/rythm.min.js/"></script>
+  <script>
+    var rythm = new Rythm()
+
+    // 再生したい音楽ファイルを選択
+    rythm.setMusic("sample.mp3")
+
+    // rythm.jsを起動して音楽再生
+    rythm.start()
+  </script>
+</html>

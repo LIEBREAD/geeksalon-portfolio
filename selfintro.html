@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="selfintro.css" />
+  </head>
+  <body>
+   <header class="header">
+  <i class="fas fa-bars header__icon">SIDE</i>
+</header>
+   <main class="content">
+       
+        
+<div id="myfav" class="contentBox">
+        <h1 class="ttl" id="ttl1" onmouseover="src=dm.png">My Game</h1>
+        <hr>
+        <p class="txt" id="txt1">identity 5という非左右型の対人ゲームが最近のマイゲームです。<br>
+        一言で言えば頭を使う鬼ごっこです。<br>リンクは<a href="https://www.identityv.jp/">こちら</a>です。</p>
+        </div> 
+        <div class="contentBox">
+        <h1 class="ttl" id="ttl0">My Data</h1>
+        <p class="txt">
+        <hr>
+        name:Takasu Aina<br>
+        birth:12/20<br>
+        school:Seikei<br>
+        majar:economic math<br>
+        favorite:game<br>
+        </p>
+        </div>
+        <div class="contentBox">
+        <h1 class="ttl" id="ttl2">Quiz</h1>
+        <hr>
+        <p class="txt">?にひらがなを入れて単語をつくろう
+    </p>
+        <div id="quiz-container"></div>
+        <div id ="feedback"></div>
+        </div>
+      </main>
+      <!--up until here is main-->
+      <aside class="sidebar">
+        <div class="sidebar__inner">
+          <h2 class="sidebar__ttl">第五好プレイ集</h2>
+          <i class="fas fa-times-circle sidebar__icon"></i>
+        </div>
+        <p class="sidebar__txt">1.天才のフクロウ</p>
+        <p class="sidebar__txt">sidebar 2</p>
+        <p class="sidebar__txt">sidebar 3</p>
+        <p class="sidebar__txt">sidebar 4</p>
+        <p class="sidebar__txt">sidebar 5</p>
+      </aside>
+      <div class="sidebar-bg"></div>
+      
+      <!-- up until here is sideBar -->
+    </div>
+    <footer class="footer">@TAKASU 2021/2/7</footer>
+    <script src ="selfintro.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="selfintro_quiz.js"></script>
+    <script>
+   jQuery(document).ready(function(){
+  /*open*/
+  $('.header__icon').on('click',function(){
+    $('.sidebar').css(
+      'display','block'
+    ).animate({
+      left:'0'
+    }, 
+      300
+    );
+    $('.sidebar-bg').css(
+      'display','block'
+    ).animate({
+      opacity:'0.5'
+    },
+      300
+    )
+  });
+  /*close*/
+  $('.sidebar__icon').on('click',function(){
+    $('.sidebar').animate({
+      left:'-200px'
+    },
+      300
+    );
+    $('.sidebar-bg').animate({
+      opacity:'0'
+    },
+      300
+    );
+    setTimeout(function(){
+      $('.sidebar').css('display','none');
+      $('.sidebar-bg').css('display','none');
+    },
+      300
+    );
+  });
+});
+    </script>
+  </body>
+</html>
